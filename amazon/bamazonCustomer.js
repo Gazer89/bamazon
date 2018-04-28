@@ -52,11 +52,11 @@ connection.connect(function(err) {
               if(err) throw err;
               result.map(item_id => {
                 let nstock_quantity = item_id.stock_quantity;
-                console.log(nstock_quantity)
+                // console.log(nstock_quantity)
 
                 if (nstock_quantity > answer.quantity ) {
                   nstock_quantity -= answer.quantity;
-                  console.log( nstock_quantity);
+                  // console.log( nstock_quantity);
                   updateQuan (nstock_quantity, answer);
                   console.log("Your purchase has been sucessfuly processed!")
                   console.log("------------------------------------------------------------------")
